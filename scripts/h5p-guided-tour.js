@@ -37,7 +37,8 @@ H5P.GuidedTour = (function ($) {
     var self = this;
     options.classes = options.classes || '';
     options.classes += ' h5p shepherd-theme-arrows';
-
+    const language = window?.H5PEditor?.contentLanguage
+    if(language && language == 'ar') options.classes += ' h5peditor-rtl';
     // ************
     // First button
     // ************
